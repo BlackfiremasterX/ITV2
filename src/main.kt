@@ -32,8 +32,6 @@ fun main()
         "Begin10" -> Begin10()
         "i1" -> Integer1()
         "Integer1" -> Integer1()
-        "i2" -> Integer2()
-        "Integer2" -> Integer2()
         "c1"  -> Case1()
         "Case1"  -> Case1()//
         else -> print("Такой задачи нет!")
@@ -185,15 +183,6 @@ fun Integer1()
     var L = readLine()!!.toInt()
     var M = (L / 100)
     print("\n Метров: $M")
-}
-fun Integer2()
-{
-    print("\nСделал Васильев Егор")
-    print("\nДана масса M в килограммах. Используя операцию деления нацело, найти количество полных тонн в ней (1 тонна = 1000 кг).")
-    print("\nВведите M: ")
-    var M = readLine()!!.toInt()
-    var T = (M / 1000)
-    print("\nТонн: $T")
 }
 fun Case1()
 {
