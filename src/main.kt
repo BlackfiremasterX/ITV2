@@ -42,6 +42,8 @@ fun main()
         "977" -> Dmitry()
         "f2222" -> for2222()
         "for2" -> For2()
+        "int323" -> int323()
+
         else -> print("Такой задачи нет!")
     }
 }
@@ -393,4 +395,31 @@ fun for2222() {
 
     }
     println("opa")
+}
+
+
+
+
+
+
+
+
+
+
+fun int323(){
+    println("Введите число А")
+    var A = readLine()!!.toInt()
+    var b = 0
+    var r = 0
+    var e = 0
+    var t = 0
+    var u = 0
+    e = A / 10
+    r = A - (A / 10) * 10
+    println(e)
+    println(r)
+    println(e * r)
+println(e + r)
+
+
 }
