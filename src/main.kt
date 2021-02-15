@@ -1,5 +1,6 @@
 import javax.print.attribute.standard.PrinterInfo
 import kotlin.math.*
+import kotlin.random.*
 
 fun main()
 {
@@ -25,6 +26,7 @@ fun main()
         "Begin9" -> Begin9()
         "b10" -> Begin10()
         "Begin10" -> Begin10()
+        "b22","begin22" -> Begin22()
         "b40" -> Begin_40()
         "i1" -> Integer1()
         "Integer1" -> Integer1()
@@ -176,6 +178,25 @@ fun Begin10()
     println("Произведение = $pow2_multi")
     println("Частное = $pow2_div")
 }
+
+fun Begin22()
+{
+
+    var A = Random.nextInt(0,100)
+    var B = Random.nextInt(-100,0)
+    print("Число А = $A\n")
+    print("Число B = $B\n")
+    var buffer = 0
+    buffer = A
+    print("Буфер = $buffer\n")
+    A = B
+    B = buffer
+    print("Число А = $A\n")
+    print("Число B = $B\n")
+}
+
+
+
 fun Integer1()
 {
     print("Сделал Васильев Егор")
