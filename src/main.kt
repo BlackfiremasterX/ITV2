@@ -40,6 +40,7 @@ fun main()
         "f2222" -> for2222()
         "for2" -> For2()
         "int323" -> int323()
+        "b24kruk" -> Begin24_KruK()
 
         else -> print("Такой задачи нет!")
     }
@@ -360,7 +361,26 @@ fun For2()
     println(b-a)
 }
 
-
+fun Begin24_KruK()
+{
+    println("Задача Begin24")
+    println("Сделал Круовых Константин")
+    var A = Random.nextInt(-100,100)
+    var B = Random.nextInt(-100,100)
+    var C = Random.nextInt(-100,100)
+    println("Число А = $A")
+    println("Число B = $B")
+    println("Число C = $C")
+    var buffer = 0
+    buffer = C
+    println("Буфер = $buffer")
+    C = A
+    A = B
+    B = buffer
+    println(A)
+    println(B)
+    println(C)
+}
 
 
 
@@ -422,7 +442,7 @@ fun for2222() {
 
 
 
-fun int323(){
+fun int323() {
     println("Введите число А")
     var A = readLine()!!.toInt()
     var b = 0
@@ -435,7 +455,6 @@ fun int323(){
     println(e)
     println(r)
     println(e * r)
-println(e + r)
-
+    println(e + r)
 
 }
