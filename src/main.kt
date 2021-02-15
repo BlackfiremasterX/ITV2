@@ -1,6 +1,6 @@
 import javax.print.attribute.standard.PrinterInfo
 import kotlin.math.*
-import kotlin.random.*
+import kotlin.random.Random
 
 fun main()
 {
@@ -10,39 +10,34 @@ fun main()
     println("Begin1_Begin2, Begin3, Begin4, Begin5, Begin6, Begin7 ,Begin8, Begin10, Integer1, Case1")
 //    println("Список доступных задач:")
 //    println("Список доступных задач:")
-    print("Выберите задачу: "); var user_choise = readLine().toString().toLowerCase()// QQWEert = qqwert
+    print("Выберите задачу: "); var user_choise = readLine()
     when(user_choise)
     {
         "b1_b2" -> Begin1_Begin2()
         "Begin1_Begin_2" -> Begin1_Begin2()
         "b3"  -> Begin3()
         "Begin3" -> Begin3()
-        "b4","begin4" -> Begin4()
-        "b5","begin5" -> Begin5()
-        "b6","begin6" -> Begin6()
-        "b7","begin7" -> Begin7()
-        "b8","begin8" -> Begin8()
+        "b4" -> Begin4()
+        "Begin4" -> Begin4()
+        "b5" -> Begin5()
+        "Begin5" -> Begin5()
+        "b6" -> Begin6()
+        "Begin6" -> Begin6()
+        "b7" -> Begin7()
+        "Begin7" -> Begin7()
+        "b8" -> Begin8()
+        "Begin8" -> Begin8()
         "b9"  -> Begin9()
         "Begin9" -> Begin9()
         "b10" -> Begin10()
         "Begin10" -> Begin10()
-        "b22","begin22" -> Begin22()
         "b40" -> Begin_40()
         "i1" -> Integer1()
         "Integer1" -> Integer1()
         "i2" -> Integer2()
         "c1"  -> Case1()
         "Case1"  -> Case1()
-        "c2" -> Case2()
-        "Case2" -> Case2()
-        "808" -> Averin()
-        "977" -> Dmitry()
-        "f2222" -> for2222()
-        "for2" -> For2()
-        "int323" -> int323()
-        "b24kruk" -> Begin24_KruK()
-        "b23kruk" -> Begin23_KruK()
-
+        "b23", "Begin23" -> Begin23()
         else -> print("Такой задачи нет!")
     }
 }
@@ -180,25 +175,6 @@ fun Begin10()
     println("Произведение = $pow2_multi")
     println("Частное = $pow2_div")
 }
-
-fun Begin22()
-{
-
-    var A = Random.nextInt(0,100)
-    var B = Random.nextInt(-100,0)
-    print("Число А = $A\n")
-    print("Число B = $B\n")
-    var buffer = 0
-    buffer = A
-    print("Буфер = $buffer\n")
-    A = B
-    B = buffer
-    print("Число А = $A\n")
-    print("Число B = $B\n")
-}
-
-
-
 fun Integer1()
 {
     print("Сделал Васильев Егор")
@@ -241,25 +217,6 @@ fun Case1()
         print("Воскресенье")
     }
 }
-fun Case2()
-{
-    print("\nСделал Васильев Егор")
-    print("\nДано целое число K. Вывести строку-описание оценки, соответствующей числу K (1 — «плохо», 2 — «неудовлетворительно»," +
-            " 3 — «удовлетворительно», 4 — «хорошо», 5 — «отлично»). Если K не лежит в диапазоне 1–5, то вывести строку «ошибка».")
-    print("\nВведите К: ")
-    var K = readLine()!!.toInt()
-
-
-    when(K)
-    {
-        1 ->    print("1 - плохо")
-        2 ->    print("2 - неудовлетворительно")
-        3 ->    print("3 - удовлетворительно")
-        4 ->    print("4 - хорошо")
-        5 ->    print("5 - отлично")
-        else -> print ("Oшибка. Повторите попытку.")
-    }
-}
 fun Begin_40()
 {
     println("Сделал Лунёв Никита")
@@ -297,184 +254,29 @@ fun Integer2()
     println("Задача Integer2")
     println("введте число больше 1000")
     var m = readLine()!!.toInt()
-    val m1 = m/ 1000.toInt()
+    val m1 = m/1000!!.toInt()
     println(m1)
     println("столько тонн в вашем числе")
 }
 
 
-fun Dmitry()
+fun Begin23()
 {
-    println("Это Дмитрий!")
-
-    var a = 15
-    println("Сторона квадрата а = $a")
-    var S =a*a
-    print("Площадб квадрата = $S")
-
-
-
-
-
-
-}
-
-fun Averin()
-{
-    val a = 8.0
-    val b = 9.0
-    println (sqrt(a*b))
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-fun For2()
-{
-    println("Сделал Круговых Константин задача For2")
-    println("Введите число ААААААААААААААААААААААААААААААААААААААААААААААААААА")
-    var a = readLine()!!.toInt()
-    println("Введите число БББББББББББББББББББББББББББББББББББББББББББББББББББ")
-    var b = readLine()!!.toInt()
-    println("Введите число NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN раз")
-    for (i in a..b)
-    {
-        println(i)
-    }
-    println("такое число чисел между а и б")
-    println(b-a)
-}
-
-fun Begin24_KruK()
-{
-    println("Задача Begin24")
-    println("Сделал Круовых Константин")
-    var A = Random.nextInt(-100,100)
-    var B = Random.nextInt(-100,100)
-    var C = Random.nextInt(-100,100)
-    println("Число А = $A")
-    println("Число B = $B")
-    println("Число C = $C")
+    print("\nСделал Васильев Егор")
+    var A = Random.nextInt(0,100)
+    var B = Random.nextInt(-100,0)
+    var C = Random.nextInt(101,200)
+    print("\nЧисло А = $A\n")
+    print("Число B = $B\n")
+    print("Число С = $C\n")
     var buffer = 0
-    buffer = C
-    println("Буфер = $buffer")
-    C = A
-    A = B
+    var buff = 0
+    buff = C
+    C = B
+    buffer = A
     B = buffer
-    println(A)
-    println(B)
-    println(C)
-}
-fun Begin23_KruK()
-{
-    println("Задача Begin23")
-    println("Сделал Круовых Константин")
-    var A = Random.nextInt(-100,100)
-    var B = Random.nextInt(-100,100)
-    var C = Random.nextInt(-100,100)
-    println("Число А = $A")
-    println("Число B = $B")
-    println("Число C = $C")
-    var buffer = 0
-    buffer = B
-    println("Буфер = $buffer")
-    B = A
-    A = C
-    C = buffer
-    println(A)
-    println(B)
-    println(C)
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-fun for2222() {
-    println("Сделал Лунёв Никита")
-
-    println("Введите число А) ")
-    var A = readLine()!!.toInt()
-
-    println("Введите число В)) ")
-    var B = readLine()!!.toInt()
-
-    println("Введите N))) ")
-    for (i in A..B)
-    {
-
-        println(i)
-
-
-    }
-    println("opa")
-}
-
-
-
-
-
-
-
-
-
-
-fun int323() {
-    println("Введите число А")
-    var A = readLine()!!.toInt()
-    var b = 0
-    var r = 0
-    var e = 0
-    var t = 0
-    var u = 0
-    e = A / 10
-    r = A - (A / 10) * 10
-    println(e)
-    println(r)
-    println(e * r)
-    println(e + r)
-
+    A = buff
+    print("Число А = $A\n")
+    print("Число B = $B\n")
+    print("Число С = $C\n")
 }
