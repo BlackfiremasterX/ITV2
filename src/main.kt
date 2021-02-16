@@ -1,6 +1,5 @@
 import javax.print.attribute.standard.PrinterInfo
 import kotlin.math.*
-import kotlin.random.Random
 
 fun main()
 {
@@ -37,6 +36,11 @@ fun main()
         "i2" -> Integer2()
         "c1"  -> Case1()
         "Case1"  -> Case1()
+        "c2" -> Case2()
+        "Case2" -> Case2()
+        "808" -> Averin()
+        "977" -> Dmitry()
+        "f2222" -> for2222()
         "b23", "Begin23" -> Begin23()
         else -> print("Такой задачи нет!")
     }
@@ -217,6 +221,25 @@ fun Case1()
         print("Воскресенье")
     }
 }
+fun Case2()
+{
+    print("\nСделал Васильев Егор")
+    print("\nДано целое число K. Вывести строку-описание оценки, соответствующей числу K (1 — «плохо», 2 — «неудовлетворительно»," +
+            " 3 — «удовлетворительно», 4 — «хорошо», 5 — «отлично»). Если K не лежит в диапазоне 1–5, то вывести строку «ошибка».")
+    print("\nВведите К: ")
+    var K = readLine()!!.toInt()
+
+
+    when(K)
+    {
+        1 ->    print("1 - плохо")
+        2 ->    print("2 - неудовлетворительно")
+        3 ->    print("3 - удовлетворительно")
+        4 ->    print("4 - хорошо")
+        5 ->    print("5 - отлично")
+        else -> print ("Oшибка. Повторите попытку.")
+    }
+}
 fun Begin_40()
 {
     println("Сделал Лунёв Никита")
@@ -254,21 +277,125 @@ fun Integer2()
     println("Задача Integer2")
     println("введте число больше 1000")
     var m = readLine()!!.toInt()
-    val m1 = m/1000!!.toInt()
+    val m1 = m/ 1000.toInt()
     println(m1)
     println("столько тонн в вашем числе")
+}
+
+
+fun Dmitry()
+{
+    println("Это Дмитрий!")
+
+    var a = 15
+    println("Сторона квадрата а = $a")
+    var S =a*a
+    print("Площадб квадрата = $S")
+
+
+
+
+
+
+}
+
+fun Averin()
+{
+    val a = 8.0
+    val b = 9.0
+    println (sqrt(a*b))
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fun for2222() {
+    println("Сделал Лунёв Никита")
+
+    println("Введите число А) ")
+    var A = readLine()!!.toInt()
+
+    println("Введите число В)) ")
+    var B = readLine()!!.toInt()
+
+    println("Введите N))) ")
+    for (i in A..B)
+    {
+
+        println(i)
+
+
+    }
+    println("opa")
 }
 
 
 fun Begin23()
 {
     print("\nСделал Васильев Егор")
-    var A = Random.nextInt(0,100)
-    var B = Random.nextInt(-100,0)
-    var C = Random.nextInt(101,200)
+    print("\nВведите А: ")
+    var A = readLine()!!.toInt()
+    print("Введите B: ")
+    var B = readLine()!!.toInt()
+    print("Введите C: ")
+    var C = readLine()!!.toInt()
     print("\nЧисло А = $A\n")
     print("Число B = $B\n")
     print("Число С = $C\n")
+    print("\n" +
+            "\n")
     var buffer = 0
     var buff = 0
     buff = C
